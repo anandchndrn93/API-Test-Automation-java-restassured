@@ -1,0 +1,25 @@
+[ {
+  "user" : {
+    "testname" : "FirstUserTest",
+    "firstname" : "Kevin",
+    "lastname" : "Mcgovney",
+    "totalprice" : 200,
+    "depositpaid" : true,
+    "checkin" : "2019-01-21",
+    "checkout" : "2019-03-31",
+    "additionalneeds" : "Lunch",
+    "bookingid" : 11
+  }
+}, {
+  "user" : {
+    "testname" : "SecondUserTest",
+    "firstname" : "Theresa",
+    "lastname" : "Hesburgh",
+    "totalprice" : 700,
+    "depositpaid" : false,
+    "checkin" : "2020-04-07",
+    "checkout" : "2020-05-01",
+    "additionalneeds" : "Dinner",
+    "bookingid" : 12
+  }
+} ]

@@ -1,0 +1,66 @@
+2020-12-28 22:09:28 INFO  RequestWrapper:57 - Login in as admin
+2020-12-28 22:09:28 INFO  RequestWrapper:106 - Performing POST on : https://restful-booker.herokuapp.com/auth
+2020-12-28 22:09:28 DEBUG RequestWrapper:114 - request : {"username":"admin", "password":"password123"}
+2020-12-28 22:09:31 DEBUG RequestWrapper:117 - Response : {"token":"3da77dfda5f1761"}
+2020-12-28 22:09:32 INFO  Listners:27 - starting Test Case: getBooKingIdsTest
+2020-12-28 22:09:32 INFO  GetBookingTest:31 -  checking getBooKingIds API response
+2020-12-28 22:09:32 DEBUG RequestWrapper:69 - Performing GET on : https://restful-booker.herokuapp.com/booking
+2020-12-28 22:09:34 DEBUG RequestWrapper:78 - response: [{"bookingid":15},{"bookingid":16},{"bookingid":13},{"bookingid":14},{"bookingid":12}]
+2020-12-28 22:09:34 DEBUG GetBookingTest:35 - API returned correct status code200
+2020-12-28 22:09:34 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:34 INFO  Listners:27 - starting Test Case: getBooKingInvalidIDTest
+2020-12-28 22:09:34 INFO  GetBookingTest:114 -  checking getBooKing API response
+2020-12-28 22:09:34 DEBUG RequestWrapper:69 - Performing GET on : https://restful-booker.herokuapp.com/booking/100
+2020-12-28 22:09:34 DEBUG RequestWrapper:78 - response: Not Found
+2020-12-28 22:09:34 DEBUG GetBookingTest:118 - API returned correct status code404
+2020-12-28 22:09:34 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:34 INFO  Listners:27 - starting Test Case: getBooKingTest
+2020-12-28 22:09:34 INFO  GetBookingTest:41 -  checking getBooKing API response
+2020-12-28 22:09:34 DEBUG RequestWrapper:69 - Performing GET on : https://restful-booker.herokuapp.com/booking/3
+2020-12-28 22:09:34 DEBUG RequestWrapper:78 - response: Not Found
+2020-12-28 22:09:35 FATAL Listners:43 - java.lang.AssertionError:  The API status code does not match expected expected [200] but found [404]
+2020-12-28 22:09:35 FATAL Listners:47 - Test Failed Abruptly. Test name: getBooKingTest
+2020-12-28 22:09:35 INFO  Listners:27 - starting Test Case: patchBookingTest
+2020-12-28 22:09:35 INFO  RequestWrapper:156 - Performing PUT on : https://restful-booker.herokuapp.com/booking/11
+2020-12-28 22:09:35 DEBUG RequestWrapper:164 - Payload : {"firstname":"Kevin","lastname":"Mcgovney"}
+2020-12-28 22:09:36 DEBUG RequestWrapper:167 - Response : Method Not Allowed
+2020-12-28 22:09:36 ERROR ManageBookingTest:81 - the entered booking id does not exist
+2020-12-28 22:09:36 FATAL Listners:43 - java.lang.AssertionError: the entered booking id does not exist
+2020-12-28 22:09:36 FATAL Listners:47 - Test Failed Abruptly. Test name: patchBookingTest
+2020-12-28 22:09:36 INFO  Listners:27 - starting Test Case: patchBookingTest
+2020-12-28 22:09:36 INFO  RequestWrapper:156 - Performing PUT on : https://restful-booker.herokuapp.com/booking/12
+2020-12-28 22:09:36 DEBUG RequestWrapper:164 - Payload : {"firstname":"Theresa","lastname":"Hesburgh"}
+2020-12-28 22:09:36 DEBUG RequestWrapper:167 - Response : {"firstname":"Theresa","lastname":"Hesburgh","totalprice":86,"depositpaid":true,"bookingdates":{"checkin":"2020-01-01","checkout":"2021-01-10"},"additionalneeds":"Fuel"}
+2020-12-28 22:09:36 DEBUG ManageBookingTest:75 - API returned correct status code200
+2020-12-28 22:09:36 DEBUG ManageBookingTest:76 - user with booking id 12 was updated
+2020-12-28 22:09:36 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:36 INFO  Listners:27 - starting Test Case: updateBookingTest
+2020-12-28 22:09:36 INFO  RequestWrapper:124 - Performing PUT on : https://restful-booker.herokuapp.com/booking/11
+2020-12-28 22:09:36 DEBUG RequestWrapper:132 - Payload : {"firstname":"Kevin","lastname":"Mcgovney","totalprice":200,"depositpaid":true,"bookingdates":{"checkin":"2019-01-21","checkout":"2019-03-31"},"additionalneeds":"Lunch"}
+2020-12-28 22:09:36 DEBUG RequestWrapper:135 - Response : Method Not Allowed
+2020-12-28 22:09:36 ERROR ManageBookingTest:59 - the entered booking id does not exist
+2020-12-28 22:09:36 FATAL Listners:43 - java.lang.AssertionError: the entered booking id does not exist
+2020-12-28 22:09:36 FATAL Listners:47 - Test Failed Abruptly. Test name: updateBookingTest
+2020-12-28 22:09:36 INFO  Listners:27 - starting Test Case: updateBookingTest
+2020-12-28 22:09:36 INFO  RequestWrapper:124 - Performing PUT on : https://restful-booker.herokuapp.com/booking/12
+2020-12-28 22:09:36 DEBUG RequestWrapper:132 - Payload : {"firstname":"Theresa","lastname":"Hesburgh","totalprice":700,"depositpaid":false,"bookingdates":{"checkin":"2020-04-07","checkout":"2020-05-01"},"additionalneeds":"Dinner"}
+2020-12-28 22:09:37 DEBUG RequestWrapper:135 - Response : {"firstname":"Theresa","lastname":"Hesburgh","totalprice":700,"depositpaid":false,"bookingdates":{"checkin":"2020-04-07","checkout":"2020-05-01"},"additionalneeds":"Dinner"}
+2020-12-28 22:09:37 DEBUG ManageBookingTest:53 - API returned correct status code200
+2020-12-28 22:09:37 DEBUG ManageBookingTest:54 - user with booking id 12 was updated
+2020-12-28 22:09:37 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:37 INFO  Listners:27 - starting Test Case: createBookingTest
+2020-12-28 22:09:37 INFO  RequestWrapper:106 - Performing POST on : https://restful-booker.herokuapp.com/booking
+2020-12-28 22:09:37 DEBUG RequestWrapper:114 - request : {"firstname":"Kevin","lastname":"Mcgovney","totalprice":200,"depositpaid":true,"bookingdates":{"checkin":"2019-01-21","checkout":"2019-03-31"},"additionalneeds":"Lunch"}
+2020-12-28 22:09:37 DEBUG RequestWrapper:117 - Response : {"bookingid":17,"booking":{"firstname":"Kevin","lastname":"Mcgovney","totalprice":200,"depositpaid":true,"bookingdates":{"checkin":"2019-01-21","checkout":"2019-03-31"},"additionalneeds":"Lunch"}}
+2020-12-28 22:09:37 DEBUG ManageBookingTest:38 - API returned correct status code200
+2020-12-28 22:09:37 DEBUG ManageBookingTest:40 - new user created with booking id 17
+2020-12-28 22:09:37 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:37 INFO  Listners:27 - starting Test Case: createBookingTest
+2020-12-28 22:09:37 INFO  RequestWrapper:106 - Performing POST on : https://restful-booker.herokuapp.com/booking
+2020-12-28 22:09:37 DEBUG RequestWrapper:114 - request : {"firstname":"Theresa","lastname":"Hesburgh","totalprice":700,"depositpaid":false,"bookingdates":{"checkin":"2020-04-07","checkout":"2020-05-01"},"additionalneeds":"Dinner"}
+2020-12-28 22:09:38 DEBUG RequestWrapper:117 - Response : {"bookingid":18,"booking":{"firstname":"Theresa","lastname":"Hesburgh","totalprice":700,"depositpaid":false,"bookingdates":{"checkin":"2020-04-07","checkout":"2020-05-01"},"additionalneeds":"Dinner"}}
+2020-12-28 22:09:38 DEBUG ManageBookingTest:38 - API returned correct status code200
+2020-12-28 22:09:38 DEBUG ManageBookingTest:40 - new user created with booking id 18
+2020-12-28 22:09:38 DEBUG Listners:36 - Test Passed
+2020-12-28 22:09:38 INFO  Listners:27 - starting Test Case: deleteBookingTest
+2020-12-28 22:09:38 FATAL Listners:57 - Test was skipped!. Test name: deleteBookingTest
