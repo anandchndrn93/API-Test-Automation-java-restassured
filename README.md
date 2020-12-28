@@ -1,4 +1,4 @@
-# API-Test-Automation-java-restassured
+# API-Test-Automation-with-java-restassured
 This is a sample API test automation framework using java restassured library. The APIs automated are take from https://restful-booker.herokuapp.com/apidoc/index.html. 
 
 Methods automated:POST,PUT,PATCH,DELETE,GET
